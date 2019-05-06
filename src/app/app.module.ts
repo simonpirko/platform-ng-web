@@ -3,8 +3,9 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
-import { IndexComponent } from './index/index.component';
-import { AuthorizationComponent } from './authorization/authorization.component';
+import {IndexComponent} from './index/index.component';
+import {AuthorizationComponent} from './authorization/authorization.component';
+import {FormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: '', component: IndexComponent},
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true})
+    RouterModule.forRoot(appRoutes, {enableTracing: true}),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

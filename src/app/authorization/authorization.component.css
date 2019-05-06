@@ -1,0 +1,12 @@
+/*.my-card {*/
+/*  box-shadow: 0 5px 5px 0 #d5d5d5;*/
+/*}*/
+
+.form-control:focus {
+  border-color: #3b8726;
+  box-shadow: 0 0 0 0 white;
+}
+
+/*.btn-outline-success:focus {*/
+/*  box-shadow: 0 0 0 0 white;*/
+/*}*/
