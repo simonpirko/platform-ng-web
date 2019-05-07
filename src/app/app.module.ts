@@ -5,11 +5,21 @@ import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {IndexComponent} from './index/index.component';
 import {AuthorizationComponent} from './authorization/authorization.component';
-import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {
+  MatButtonModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatSelectModule,
+  MatToolbarModule
+} from '@angular/material';
+import {ReactiveFormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: '', component: IndexComponent},
-  {path: 'auth', component: AuthorizationComponent}
+  {path: 'login', component: AuthorizationComponent}
 ];
 
 @NgModule({
@@ -22,8 +32,17 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes, {enableTracing: true}),
-    FormsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatIconModule,
+    ReactiveFormsModule,
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
